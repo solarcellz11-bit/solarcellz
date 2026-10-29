@@ -1,0 +1,597 @@
+{
+  "description": "Solar Cellz × DEP Product Mapping Catalog (Live Sync from Ben's 58 Products)",
+  "version": "1.0.0",
+  "lastFetchedFromDep": "2026-10-29T09:33:30.478Z",
+  "totalProducts": 58,
+  "defaultLeadTimes": {
+    "converters": "2-4 weeks",
+    "solar-panels": "In stock",
+    "breakers": "1-2 weeks",
+    "batteries": "4-6 weeks",
+    "ev-chargers": "2-3 weeks",
+    "solutions": "4-8 weeks",
+    "default": "2-4 weeks"
+  },
+  "products": [
+    {
+      "dcideId": "6ad0c9dd19f261ee08e70d58",
+      "sku": "HYC400",
+      "title": "400kW DC Fast Charger",
+      "shopifyHandle": "alpitronic-hypercharger-hyc400-ev-charger-100-kw-400-kw",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/alpitronic-hypercharger-hyc400-ev-charger-100-kw-400-kw",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 92999,
+      "updatedAt": "2026-10-23T12:34:24.755Z"
+    },
+    {
+      "dcideId": "67e3d295036373143b4e4fa9",
+      "sku": "APR-10K15V2-US",
+      "title": "10 kW - 15kWh aPower 2 home energy battery",
+      "shopifyHandle": "franklinwh-apower-2-15kwh-apr-10k15v2-us",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/franklinwh-apower-2-15kwh-apr-10k15v2-us",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 12599,
+      "updatedAt": "2026-10-23T12:34:24.488Z"
+    },
+    {
+      "dcideId": "6ac34727a72b17de007027e2",
+      "sku": "TSM‑DEG19RC.20-570",
+      "title": "Vertex 570W Bifacial Dual Glass Solar Panel",
+      "shopifyHandle": "trina-vertex-570w-bifacial-solar-panel-tsm-deg19rc-20",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/trina-vertex-570w-bifacial-solar-panel-tsm-deg19rc-20",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 241.5,
+      "updatedAt": "2026-10-23T12:34:24.185Z"
+    },
+    {
+      "dcideId": "6ac346b5051a2efbb844896f",
+      "sku": "TSM‑DEG19RC.20-560",
+      "title": "Vertex 560W Bifacial Dual Glass Solar Panel",
+      "shopifyHandle": "trina-vertex-560-w-bifacial-solar-panel-tsm-deg19rc-20",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/trina-vertex-560-w-bifacial-solar-panel-tsm-deg19rc-20",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 218.5,
+      "updatedAt": "2026-10-23T12:34:23.939Z"
+    },
+    {
+      "dcideId": "691cf0ad74fd9acfd5eca9d9",
+      "sku": "SIL-440 QD",
+      "title": "SILFAB PRIME NTC",
+      "shopifyHandle": "silfab-solar-prime-ntc-sil-440-qd",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/silfab-solar-prime-ntc-sil-440-qd",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 279.32,
+      "updatedAt": "2026-10-23T12:34:23.705Z"
+    },
+    {
+      "dcideId": "67e2d957002cd553cb9af802",
+      "sku": "REC470AA PURE-RX",
+      "title": "470W PURE-RX solar panel",
+      "shopifyHandle": "rec-alpha-pure-rx-series-470w",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/rec-alpha-pure-rx-series-470w",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 370.99,
+      "updatedAt": "2026-10-23T12:34:23.467Z"
+    },
+    {
+      "dcideId": "67e2d95657dc13802f943273",
+      "sku": "REC460AA PURE-RX",
+      "title": "460W PURE-RX solar panel",
+      "shopifyHandle": "rec-solar-rec460aa-pure-rx-alpha-series-460-watt-module",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/rec-solar-rec460aa-pure-rx-alpha-series-460-watt-module",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 369.59,
+      "updatedAt": "2026-10-23T12:34:23.236Z"
+    },
+    {
+      "dcideId": "67e2d9559c5edbf48f00a056",
+      "sku": "REC450AA PURE-RX",
+      "title": "450W PURE-RX solar panel",
+      "shopifyHandle": "rec450aa-pure-rx-450-w-black-on-black-88-half-cell-heterojunction",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/rec450aa-pure-rx-450-w-black-on-black-88-half-cell-heterojunction",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 408.16,
+      "updatedAt": "2026-10-23T12:34:22.894Z"
+    },
+    {
+      "dcideId": "67e2dd3ba3fa95ae6383ff43",
+      "sku": "REC420AA PURE 2",
+      "title": "420W PURE 2 solar panel",
+      "shopifyHandle": "rec-alpha-series-rec420aa-pure2",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/rec-alpha-series-rec420aa-pure2",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 399.5,
+      "updatedAt": "2026-10-23T12:34:22.632Z"
+    },
+    {
+      "dcideId": "67e2db75a9b2dbf9bd1cd68c",
+      "sku": "REC410AA PURE-R",
+      "title": "410W PURE-R solar panel",
+      "shopifyHandle": "rec-solar-holdings-as-pure-r-alpha-pure-r-series-410-w-half-cut-bifacial-rec-heteroj",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/rec-solar-holdings-as-pure-r-alpha-pure-r-series-410-w-half-cut-bifacial-rec-heteroj",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 301.99,
+      "updatedAt": "2026-10-23T12:34:22.387Z"
+    },
+    {
+      "dcideId": "67e2db761bede2f75a4fe821",
+      "sku": "REC400AA PURE-R",
+      "title": "400W PURE-R solar panel",
+      "shopifyHandle": "rec-alpha-black-rec400aa-400w-mono-solar-panel",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/rec-alpha-black-rec400aa-400w-mono-solar-panel",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 358.99,
+      "updatedAt": "2026-10-23T12:34:22.134Z"
+    },
+    {
+      "dcideId": "6a99319c9603b0a1eab02dfc",
+      "sku": "Q.PEAK DUO BLK ML-G10+ 410",
+      "title": "410W mono PERC solar panel",
+      "shopifyHandle": "q-cells-q-peak-ml-g10-410w-black-frame-black-backsheet-with-mc4-connectors-6-busb",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/q-cells-q-peak-ml-g10-410w-black-frame-black-backsheet-with-mc4-connectors-6-busb",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 365.99,
+      "updatedAt": "2026-10-23T12:34:21.879Z"
+    },
+    {
+      "dcideId": "6a99315a9603b0a1eab02d82",
+      "sku": "Q.PEAK DUO BLK ML-G10+ 405",
+      "title": "405W mono PERC solar panel",
+      "shopifyHandle": "hanwha-q-cells-q-peak-duo-blk-ml-g10-405w-mono-solar-panel",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/hanwha-q-cells-q-peak-duo-blk-ml-g10-405w-mono-solar-panel",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 283.5,
+      "updatedAt": "2026-10-23T12:34:21.636Z"
+    },
+    {
+      "dcideId": "6ac3625462b8ebc7abc0131d",
+      "sku": "MSX10-440HN0B",
+      "title": "440W Half-Cell Mono Solar Panel",
+      "shopifyHandle": "mission-solar-440w-108-half-cell-n-type-i-topcon-monocrystalline-black-backsheet-black-35mm-frame-module-pallet-of-28",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/mission-solar-440w-108-half-cell-n-type-i-topcon-monocrystalline-black-backsheet-black-35mm-frame-module-pallet-of-28",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 205,
+      "updatedAt": "2026-10-23T12:34:21.375Z"
+    },
+    {
+      "dcideId": "6a03282404817af1694465c3",
+      "sku": "MSX10-435HN0B",
+      "title": "435W Half-Cell Mono Solar Panel",
+      "shopifyHandle": "mission-solar-msx10-435hn0b-435-w-n-type-i-topcon-solar-module-108-half-cells-bl",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/mission-solar-msx10-435hn0b-435-w-n-type-i-topcon-solar-module-108-half-cells-bl",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 231.31,
+      "updatedAt": "2026-10-23T12:34:21.117Z"
+    },
+    {
+      "dcideId": "681dae88311d0b690efaee0b",
+      "sku": "MSE PERC 108HC 410W",
+      "title": "410W PERC solar panel",
+      "shopifyHandle": "mission-410-mse-perc-108hc",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/mission-410-mse-perc-108hc",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 355.19,
+      "updatedAt": "2026-10-23T12:34:20.846Z"
+    },
+    {
+      "dcideId": "681cbf068e4598ce5c3be1c2",
+      "sku": "JKM580N-72HL4-BDX",
+      "title": "580W TOPCon solar panel",
+      "shopifyHandle": "jinko-tiger-580w-neo-bifacial-solar-panel-jkm580n-72hl4-bdv",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/jinko-tiger-580w-neo-bifacial-solar-panel-jkm580n-72hl4-bdv",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 268,
+      "updatedAt": "2026-10-23T12:34:20.598Z"
+    },
+    {
+      "dcideId": "67e3f462d53f46211e75bdcb",
+      "sku": "GSD7G72M-550WT",
+      "title": "550W solar panel",
+      "shopifyHandle": "gstar-550w-solar-panel",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/gstar-550w-solar-panel",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 6378.54,
+      "updatedAt": "2026-10-23T12:34:20.364Z"
+    },
+    {
+      "dcideId": "67e6ab0b119d86bd9e65d649",
+      "sku": "AC-580TGB/144TS",
+      "title": "580W bifacial solar panel",
+      "shopifyHandle": "axitec-solar-580w-144-topcon-cells-bifacial-solar-panel",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/axitec-solar-580w-144-topcon-cells-bifacial-solar-panel",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 250.7,
+      "updatedAt": "2026-10-23T12:34:20.111Z"
+    },
+    {
+      "dcideId": "6a708c5272798853c0a803f8",
+      "sku": "Solis-1P7.6K-4G-US",
+      "title": "7.6kW Single Phase Grid-Tied Residential Inverter",
+      "shopifyHandle": "solis-7-6kw-single-phase-solar-inverter-3-mppt-208-240vac-w-aps-trans",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-7-6kw-single-phase-solar-inverter-3-mppt-208-240vac-w-aps-trans",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 1913.6,
+      "updatedAt": "2026-10-23T12:34:19.857Z"
+    },
+    {
+      "dcideId": "67ed87d7e5a9299154411902",
+      "sku": "Solis-1P6K-4G-US",
+      "title": "6kW Single Phase Grid-Tied Residential Inverter",
+      "shopifyHandle": "solis-ginlong-technologies-6-kw-natural-convection-single-phase-string-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-ginlong-technologies-6-kw-natural-convection-single-phase-string-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 1660.92,
+      "updatedAt": "2026-10-23T12:34:19.600Z"
+    },
+    {
+      "dcideId": "6a708ca1f85e1a4750f685ac",
+      "sku": "Solis-1P10K-4G-US",
+      "title": "10kW Single Phase Grid-Tied Residential Inverter",
+      "shopifyHandle": "solis-ginlong-technologies-10-kw-natural-convection-single-phase-string-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-ginlong-technologies-10-kw-natural-convection-single-phase-string-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 1992,
+      "updatedAt": "2026-10-23T12:34:19.343Z"
+    },
+    {
+      "dcideId": "67ed9c1dfe225c2c0477a340",
+      "sku": "S6-GC60K-US",
+      "title": "60kW Three Phase Grid-Tied Inverter",
+      "shopifyHandle": "solis-60kw-three-phase-grid-tied-pv-string-inverter-480v-s6-gc60k-us-rss",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-60kw-three-phase-grid-tied-pv-string-inverter-480v-s6-gc60k-us-rss",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 4609.4,
+      "updatedAt": "2026-10-23T12:34:19.060Z"
+    },
+    {
+      "dcideId": "6a7184009556bd44253e3c55",
+      "sku": "S6-EH1P7.6K-H-US",
+      "title": "7.6kW Single Phase High Voltage Energy Storage Inverter",
+      "shopifyHandle": "solis-s6-hybrid-inverter-7-6kw-single-phase-three-mppt-with-aps-transmitter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-s6-hybrid-inverter-7-6kw-single-phase-three-mppt-with-aps-transmitter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2399,
+      "updatedAt": "2026-10-23T12:34:18.793Z"
+    },
+    {
+      "dcideId": "6a71835954b6a444ed6eb1d4",
+      "sku": "S6-EH1P6K-H-US",
+      "title": "6kW Single Phase High Voltage Energy Storage Inverter",
+      "shopifyHandle": "solis-s6-hybrid-inverter-6kw-single-phase-three-mppt-with-aps-transmitter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-s6-hybrid-inverter-6kw-single-phase-three-mppt-with-aps-transmitter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2200,
+      "updatedAt": "2026-10-23T12:34:18.522Z"
+    },
+    {
+      "dcideId": "6a7182fb6b85c4586a0e7fbf",
+      "sku": "S6-EH1P5K-H-US",
+      "title": "5kW Single Phase High Voltage Energy Storage Inverter",
+      "shopifyHandle": "solis-s6-hybrid-inverter-5kw-single-phase-three-mppt-with-aps-transmitter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-s6-hybrid-inverter-5kw-single-phase-three-mppt-with-aps-transmitter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2119,
+      "updatedAt": "2026-10-23T12:34:18.254Z"
+    },
+    {
+      "dcideId": "6a71856d49691f65d965a2d9",
+      "sku": "S6-EH1P11.4K-H-US",
+      "title": "11.4kW Single Phase High Voltage Energy Storage Inverter",
+      "shopifyHandle": "solis-s6-hybrid-inverter-11-4kw-single-phase-four-mppt-with-aps-transmitter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-s6-hybrid-inverter-11-4kw-single-phase-four-mppt-with-aps-transmitter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2399,
+      "updatedAt": "2026-10-23T12:34:18.022Z"
+    },
+    {
+      "dcideId": "6a718500d7f34c33f906b745",
+      "sku": "S6-EH1P10K-H-US",
+      "title": "10kW Single Phase High Voltage Energy Storage Inverter",
+      "shopifyHandle": "solis-s6-hybrid-inverter-10kw-single-phase-three-mppt-with-aps-transmitter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solis-s6-hybrid-inverter-10kw-single-phase-three-mppt-with-aps-transmitter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2001,
+      "updatedAt": "2026-10-23T12:34:17.765Z"
+    },
+    {
+      "dcideId": "6a731fea1e49343aaaf01677",
+      "sku": "SE7600H-US [208V]",
+      "title": "7.6kW Single Phase Inverter with HD-Wave Technology",
+      "shopifyHandle": "solaredge-technologies-7600-w-natural-convection-home-wave-inverter-with-hd-wave-tec",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-technologies-7600-w-natural-convection-home-wave-inverter-with-hd-wave-tec",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2721.99,
+      "updatedAt": "2026-10-23T12:34:17.497Z"
+    },
+    {
+      "dcideId": "6a73256fad0a05999662309e",
+      "sku": "SE7600H-US",
+      "title": "7.6kW Single Phase Inverter with HD-Wave Technology",
+      "shopifyHandle": "solaredge-technologies-7600-w-natural-convection-home-wave-inverter-with-hd-wave-tec",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-technologies-7600-w-natural-convection-home-wave-inverter-with-hd-wave-tec",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2721.99,
+      "updatedAt": "2026-10-23T12:34:17.248Z"
+    },
+    {
+      "dcideId": "6a72fe0c23f16c683f23aa2a",
+      "sku": "SE40KUS",
+      "title": "40kW Three Phase Commercial Inverter",
+      "shopifyHandle": "solaredge-40000-w-three-phase-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-40000-w-three-phase-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 3599,
+      "updatedAt": "2026-10-23T12:34:16.953Z"
+    },
+    {
+      "dcideId": "6a7323774911ef9bd8a52592",
+      "sku": "SE3800H-US",
+      "title": "3.8kW Single Phase Inverter with HD-Wave Technology",
+      "shopifyHandle": "solaredge-3800-w-single-phase-home-hub-inverter-with-hd-wave-technology",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-3800-w-single-phase-home-hub-inverter-with-hd-wave-technology",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2600,
+      "updatedAt": "2026-10-23T12:34:16.710Z"
+    },
+    {
+      "dcideId": "6a72fdb5e259a0dd33dbf377",
+      "sku": "SE30KUS",
+      "title": "30kW Three Phase Commercial Inverter",
+      "shopifyHandle": "solaredge-30000-w-three-phase-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-30000-w-three-phase-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 3680,
+      "updatedAt": "2026-10-23T12:34:16.478Z"
+    },
+    {
+      "dcideId": "6a72fd36a868c076a0c170a1",
+      "sku": "SE17.3KUS",
+      "title": "17.3kW Three Phase Commercial Inverter",
+      "shopifyHandle": "solaredge-17300-w-three-phase-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-17300-w-three-phase-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 3795,
+      "updatedAt": "2026-10-23T12:34:16.239Z"
+    },
+    {
+      "dcideId": "6a73272758574bc58b98160c",
+      "sku": "SE11400H-US",
+      "title": "11.4kW Single Phase Inverter with HD-Wave Technology",
+      "shopifyHandle": "solaredge-11400-w-single-phase-home-hub-inverter-with-hd-wave-technology",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-11400-w-single-phase-home-hub-inverter-with-hd-wave-technology",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2999,
+      "updatedAt": "2026-10-23T12:34:16.010Z"
+    },
+    {
+      "dcideId": "66df729461a114df85547154",
+      "sku": "SE10KUS",
+      "title": "10kW Three Phase Commercial Inverter",
+      "shopifyHandle": "solaredge-se10k-usr2ibnz4-10-kw-120-208-vac-3-phase-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-se10k-usr2ibnz4-10-kw-120-208-vac-3-phase-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 3392.5,
+      "updatedAt": "2026-10-23T12:34:15.755Z"
+    },
+    {
+      "dcideId": "6a7304b5e1b25d16e71eda3f",
+      "sku": "SE100KUS",
+      "title": "100kW Three Phase Inverter",
+      "shopifyHandle": "solaredge-se100k-us08ibnz4-100kw-three-phase-string-inverter-primary-unit-non",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-se100k-us08ibnz4-100kw-three-phase-string-inverter-primary-unit-non",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2512.73,
+      "updatedAt": "2026-10-23T12:34:15.513Z"
+    },
+    {
+      "dcideId": "6a732077eb228d1fcb8f3724",
+      "sku": "SE10000H-US [208V]",
+      "title": "10kW Single Phase Inverter with HD-Wave Technology",
+      "shopifyHandle": "solaredge-single-phase-hd-wave-inverter-10-0kw",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-single-phase-hd-wave-inverter-10-0kw",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2665.36,
+      "updatedAt": "2026-10-23T12:34:15.282Z"
+    },
+    {
+      "dcideId": "6a7325f3d322c45244a28e87",
+      "sku": "SE10000H-US",
+      "title": "10kW Single Phase Inverter with HD-Wave Technology",
+      "shopifyHandle": "solaredge-technologies-10000-w-natural-convection-home-wave-inverter-with-hd-wave-te",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/solaredge-technologies-10000-w-natural-convection-home-wave-inverter-with-hd-wave-te",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2875,
+      "updatedAt": "2026-10-23T12:34:15.000Z"
+    },
+    {
+      "dcideId": "6a8c0fb387d6649460ce7568",
+      "sku": "18K-2P-LV",
+      "title": "Limitless 18K Hybrid Inverter",
+      "shopifyHandle": "sol-ark-18k-2p-hybrid-solar-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sol-ark-18k-2p-hybrid-solar-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 6593,
+      "updatedAt": "2026-10-23T12:34:14.751Z"
+    },
+    {
+      "dcideId": "6a8c09f4991e0e3a1856f9c8",
+      "sku": "15K-2P-LV",
+      "title": "Limitless 15K Hybrid Inverter",
+      "shopifyHandle": "sol-ark-15k-2p-hybrid-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sol-ark-15k-2p-hybrid-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 5750,
+      "updatedAt": "2026-10-23T12:34:14.494Z"
+    },
+    {
+      "dcideId": "680a5a8ade89c214626ce2a1",
+      "sku": "12K-P",
+      "title": "Sol-Ark 12K Essentials",
+      "shopifyHandle": "sol-ark-12000-w-120-240-208-vac-grid-tie-battery-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sol-ark-12000-w-120-240-208-vac-grid-tie-battery-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 8499,
+      "updatedAt": "2026-10-23T12:34:14.250Z"
+    },
+    {
+      "dcideId": "6a734366e5f5f1008af1f60f",
+      "sku": "SHP 150-US-21",
+      "title": "150kW Sunny Highpower Three Phase Inverter",
+      "shopifyHandle": "sma-solar-technology-ag-150000-w-17-5-in-transformless-topology-sunny-highpower-peak",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-solar-technology-ag-150000-w-17-5-in-transformless-topology-sunny-highpower-peak",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 11859.75,
+      "updatedAt": "2026-10-23T12:34:13.986Z"
+    },
+    {
+      "dcideId": "6a742151cbffaf24936fe9d3",
+      "sku": "SBSE11.5-US-50",
+      "title": "11.5kW Sunny Boy Smart Energy Hybrid Inverter",
+      "shopifyHandle": "sma-sunny-boy-smart-energy-sbse-11-4-11400-watt-208-240-vac-single-phase-hybrid-inv",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-sunny-boy-smart-energy-sbse-11-4-11400-watt-208-240-vac-single-phase-hybrid-inv",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 3499,
+      "updatedAt": "2026-10-23T12:34:13.744Z"
+    },
+    {
+      "dcideId": "6a74202174b3b67876704b1a",
+      "sku": "SBSE9.6-US-50",
+      "title": "9.6kW Sunny Boy Smart Energy Hybrid Inverter",
+      "shopifyHandle": "sma-9680-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-9680-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 3621.3,
+      "updatedAt": "2026-10-23T12:34:13.438Z"
+    },
+    {
+      "dcideId": "6a741fede6470914246808c1",
+      "sku": "SBSE7.7-US-50",
+      "title": "7.7kW Sunny Boy Smart Energy Hybrid Inverter",
+      "shopifyHandle": "sma-15360-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-15360-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2950,
+      "updatedAt": "2026-10-23T12:34:13.171Z"
+    },
+    {
+      "dcideId": "6a741fa6fe0af8b4e6a5fe99",
+      "sku": "SBSE5.8-US-50",
+      "title": "5.8kW Sunny Boy Smart Energy Hybrid Inverter",
+      "shopifyHandle": "sma-11520-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-11520-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2850.85,
+      "updatedAt": "2026-10-23T12:34:12.910Z"
+    },
+    {
+      "dcideId": "6a741f670a0ead80ac02ccae",
+      "sku": "SBSE4.8-US-50",
+      "title": "4.8kW Sunny Boy Smart Energy Hybrid Inverter",
+      "shopifyHandle": "sma-sunny-boy-smart-energy-4-8kw-grid-tie-hybrid-inverter-sbse-4-8-us-50-240-vac",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-sunny-boy-smart-energy-4-8kw-grid-tie-hybrid-inverter-sbse-4-8-us-50-240-vac",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 2013.23,
+      "updatedAt": "2026-10-23T12:34:12.620Z"
+    },
+    {
+      "dcideId": "66df720961a114df8554705f",
+      "sku": "SBSE3.8-US-50",
+      "title": "3.8kW Sunny Boy Smart Energy Hybrid Inverter",
+      "shopifyHandle": "sma-7680-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-7680-wp-sunny-boy-smart-energy-hybrid-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 1978.07,
+      "updatedAt": "2026-10-23T12:34:12.371Z"
+    },
+    {
+      "dcideId": "6a733709b38d109d692fb8a4",
+      "sku": "DC-DC Converter",
+      "title": "500kW DC-DC Converter",
+      "shopifyHandle": "sma-solar-technology-ag-500-kw-at-1000-vdc-550-1500-v-dc-dc-dc-dc-converter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/sma-solar-technology-ag-500-kw-at-1000-vdc-550-1500-v-dc-dc-dc-dc-converter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 99918.5,
+      "updatedAt": "2026-10-23T12:34:12.137Z"
+    },
+    {
+      "dcideId": "691ceace526cd7492ee7e6f5",
+      "sku": "IV-16000-HYB-AW-FX-XX",
+      "title": "EG4® FLEXBOSS21 HYBRID INVERTER",
+      "shopifyHandle": "eg4-flexboss21-16kw-ac-hybrid-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/eg4-flexboss21-16kw-ac-hybrid-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 4828.85,
+      "updatedAt": "2026-10-23T12:34:11.875Z"
+    },
+    {
+      "dcideId": "67d6a40522710595229e72eb",
+      "sku": "CPS SCH275KTL-DO/US-800-36",
+      "title": "275 kW-800 V three-phase string inverter",
+      "shopifyHandle": "cps-chint-sch275ktl-do-us-800-275kw-3phase-string-inverter-1500vdc-12-mppt-800vac",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/cps-chint-sch275ktl-do-us-800-275kw-3phase-string-inverter-1500vdc-12-mppt-800vac",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 12850,
+      "updatedAt": "2026-10-23T12:34:11.578Z"
+    },
+    {
+      "dcideId": "67d692b23ee3e75701e738cf",
+      "sku": "CPS SCH100KTL-DO/US-480",
+      "title": "100 kW-480 V three-phase string inverter",
+      "shopifyHandle": "cps-sch100ktl-do-us-480-d-100kw-3phase-string-inverter",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/cps-sch100ktl-do-us-480-d-100kw-3phase-string-inverter",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 10250,
+      "updatedAt": "2026-10-23T12:34:11.330Z"
+    },
+    {
+      "dcideId": "67e670a201d0ef2a7d3d8558",
+      "sku": "QT2-480",
+      "title": "QT2 3-phase solar microinverter (480V)",
+      "shopifyHandle": "apsystems-qt2-microinverter-480v-sku-part-number-qt2-480v",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/apsystems-qt2-microinverter-480v-sku-part-number-qt2-480v",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 359,
+      "updatedAt": "2026-10-23T12:34:11.092Z"
+    },
+    {
+      "dcideId": "67e66edee2a3ebf4b52e7abf",
+      "sku": "QT2-208",
+      "title": "QT2 3-phase solar microinverter (208V)",
+      "shopifyHandle": "apsystems-qt2-microinverter-208v-sku-part-number-qt2-208v",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/apsystems-qt2-microinverter-208v-sku-part-number-qt2-208v",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 349,
+      "updatedAt": "2026-10-23T12:34:10.842Z"
+    },
+    {
+      "dcideId": "6aba03c302f24a152db77b12",
+      "sku": "MNEDC250",
+      "title": "MNEDC 250A DC Breaker",
+      "shopifyHandle": "midnite-solar-125vdc-250a-panel-mount-breaker-sku-part-number-mnedc250",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/midnite-solar-125vdc-250a-panel-mount-breaker-sku-part-number-mnedc250",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 124.99,
+      "updatedAt": "2026-10-23T12:34:10.595Z"
+    },
+    {
+      "dcideId": "6aba059fedcc6ef82a5d6715",
+      "sku": "MNEDC175",
+      "title": "MNEDC 175A DC Breaker",
+      "shopifyHandle": "midnite-solar-125vdc-175a-panel-mount-breaker-sku-part-number-mnedc175",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/midnite-solar-125vdc-175a-panel-mount-breaker-sku-part-number-mnedc175",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 127,
+      "updatedAt": "2026-10-23T12:34:10.340Z"
+    },
+    {
+      "dcideId": "67d6c7edb1df49f16a5ad792",
+      "sku": "CPS ES-125kW/261kWh-US",
+      "title": "125 kW-261 kWh commercial ESS solution",
+      "shopifyHandle": "chint-cps-es-125kw-62-5kw-261kwh-commercial-energy-storage",
+      "shopifyUrl": "https://store.solarcellzusa.com/products/chint-cps-es-125kw-62-5kw-261kwh-commercial-energy-storage",
+      "defaultLeadTime": "5-9 days",
+      "currentDepPrice": 145000,
+      "updatedAt": "2026-10-23T12:34:10.047Z"
+    }
+  ]
+}

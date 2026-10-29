@@ -1,0 +1,42 @@
+{
+  "name": "solar-cellz-dep-integration",
+  "version": "1.0.0",
+  "description": "Solar Cellz USA Shopify to Direct Energy Partners (DEP) DCIDE Distributor Pricing API Integration",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "sync:all": "tsx src/cli/syncAll.ts",
+    "sync:reconcile": "tsx src/cli/reconcile.ts",
+    "sync:test-one": "tsx src/cli/testPushOne.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "shopify",
+    "dep",
+    "dcide",
+    "solar-cellz",
+    "pricing-sync",
+    "distributor-pricing"
+  ],
+  "author": "Deven Web Studio",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.21.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "nodemailer": "^10.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
