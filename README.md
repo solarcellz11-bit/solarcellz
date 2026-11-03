@@ -1,176 +1,139 @@
-# Solar Cellz USA × DEP (Direct Energy Partners) API Integration
+# Solar Cellz USA x Direct Energy Partners (DEP) API Integration
 
-> Production middleware connecting **Solar Cellz USA** Shopify store (`store.solarcellzusa.com`) to the **Direct Energy Partners (DEP)** DCIDE catalog via the Distributor Pricing API.
-
----
-
-##  Overview & Architecture
-
-Shopify serves as the **single source of truth**. The middleware pushes price, lead time, SKU, and product URL to DEP's Distributor Pricing API.
-
-```
-┌──────────────────────────────────────┐
-│  Solar Cellz USA Shopify Store       │
-│  (store.solarcellzusa.com)           │
-└──────────────────┬───────────────────┘
-                   │
-                   │ Webhooks: products/update, inventory_levels/update, products/delete
-                   ▼
-┌───────────────────────────────────────────────────────────────┐
-│  Integration Middleware (Node.js / TypeScript)                │
-│  - HMAC Signature Verification                                │
-│  - Intelligent Lead Time Calculation ("In stock" vs Restock)  │
-│  - Rate-Limited Batching & Exponential Backoff Retries        │
-│  - Nightly Reconcile Engine (Drift Detection & Auto-Fix)       │
-│  - Alert Dispatcher (Email & Webhook notifications)           │
-└──────────────────┬────────────────────────────────────────────┘
-                   │
-                   │ PUT /api/distributor-prices/{dcideId}
-                   │ GET /api/distributor-prices (Nightly Reconcile)
-                   │ DELETE /api/distributor-prices/{dcideId} (Withdrawn/Archived)
-                   ▼
-┌──────────────────────────────────────┐
-│  DEP DCIDE Online Catalog            │
-│  (api.directenergypartners.com)      │
-└──────────────────────────────────────┘
-```
+Production middleware connecting Solar Cellz USA Shopify store (`store.solarcellzusa.com`) to the Direct Energy Partners (DEP) DCIDE catalog via the Distributor Pricing API.
 
 ---
 
-##  Quick Start (Works Offline / In Mock Mode Right Now)
+## Overview and Architecture
 
-The system includes a **built-in mock mode** with the 58-product match catalog so you can run and test everything end-to-end **immediately**, even before receiving live credentials from Nathan or Ben.
+Shopify serves as the single source of truth. The middleware pushes price, lead time, SKU, and product URL to DEP's Distributor Pricing API on live events and runs a nightly reconciliation job to audit and maintain catalog synchronization.
 
-### 1. Install Dependencies
-```bash
-npm install
 ```
-
-### 2. Run Automated Test Suite
-```bash
-npm test
++--------------------------------------+
+|  Solar Cellz USA Shopify Store       |
+|  (store.solarcellzusa.com)           |
++------------------+-------------------+
+                   |
+                   | Webhooks: products/update, inventory_levels/update, products/delete
+                   v
++---------------------------------------------------------------+
+|  Integration Middleware (Node.js / TypeScript)                |
+|  - HMAC Signature Verification                                |
+|  - Dynamic Lead Time Calculation ("In stock" vs Restock)      |
+|  - Rate-Limited Batching and Exponential Backoff Retries      |
+|  - Nightly Reconcile Engine (Drift Detection and Auto-Fix)    |
+|  - Alert Dispatcher (Email and Webhook notifications)         |
++------------------+--------------------------------------------+
+                   |
+                   | PUT /api/distributor-prices/{dcideId}
+                   | GET /api/distributor-prices (Nightly Reconcile)
+                   | DELETE /api/distributor-prices/{dcideId} (Withdrawn/Archived)
+                   v
++--------------------------------------+
+|  DEP DCIDE Online Catalog            |
+|  (directenergypartners.com)          |
++--------------------------------------+
 ```
-*(Runs 14 automated unit & integration tests covering DEP client, lead-time rules, reconcile engine, and webhook routes).*
-
-### 3. Test Phase 2: Push CPS ES-125kW (Single Product Test)
-```bash
-npm run sync:test-one
-```
-
-### 4. Test Bulk Push (Catalog Sync with Rate Throttling)
-```bash
-npm run sync:all
-```
-
-### 5. Test Nightly Reconcile (Audit & Fix Drift)
-```bash
-npm run sync:reconcile
-```
-
-### 6. Start the Webhook Server
-```bash
-npm run dev
-```
-The server will start on `http://localhost:3000` with the health check available at `http://localhost:3000/health`.
 
 ---
 
-##  Switching to Production (When You Receive API Keys)
+## Features
 
-When Nathan provides the Shopify Custom App Token and Ben sends the DCIDE API Key, **no code changes are needed**! Simply edit `.env`:
+- **Instant Price and Stock Synchronization**: Webhook-driven synchronization updating DEP in real-time when changes occur in Shopify.
+- **Dynamic Lead-Time Logic**: Automatically sets "In stock" when inventory is greater than 0, or calculates restock lead time when stock reaches 0.
+- **Automated Lifecycle Management**: Archived or deleted Shopify products are automatically withdrawn from DEP via DELETE requests.
+- **Nightly Reconciliation Engine**: Automated 2:00 AM UTC audit comparing DEP stored prices against Shopify, automatically healing any discrepancies.
+- **Enterprise Resilience**: Exponential backoff retries, rate-limit throttling, and alerting on HTTP 401/409 responses.
+
+---
+
+## Environment Configuration
+
+Configure the following environment variables in `.env` or your hosting provider dashboard:
 
 ```ini
-# 1. DEP DCIDE Settings (from Ben Vanspringel)
-DEP_API_BASE_URL=https://api.directenergypartners.com
-DCIDE_API_KEY=your_actual_dcide_api_key_here
+PORT=3000
+NODE_ENV=production
 
-# 2. Shopify Store Settings (from Nathan Roberts)
-SHOPIFY_STORE_DOMAIN=store.solarcellzusa.com
-SHOPIFY_ADMIN_ACCESS_TOKEN=shpat_your_shopify_admin_access_token_here
-SHOPIFY_WEBHOOK_SECRET=your_shopify_webhook_secret_here
+# DEP DCIDE Distributor Pricing API
+DEP_API_BASE_URL=https://directenergypartners.com
+DCIDE_API_KEY=your_dcide_api_key
 
-# 3. Switch Mock Mode to False
+# Solar Cellz Shopify Store
+SHOPIFY_STORE_DOMAIN=p2bgv0-0e.myshopify.com
+SHOPIFY_PUBLIC_DOMAIN=store.solarcellzusa.com
+SHOPIFY_ADMIN_ACCESS_TOKEN=your_shopify_admin_access_token
+SHOPIFY_API_VERSION=2024-10
+SHOPIFY_WEBHOOK_SECRET=your_shopify_webhook_secret
+
+# Sync and Rate Limiting Settings
 USE_MOCK_SHOPIFY=false
+BATCH_DELAY_MS=200
+MAX_RETRIES=3
+RETRY_DELAY_MS=500
+
+# Lead Time Defaults
+DEFAULT_LEAD_TIME_IN_STOCK=In stock
+DEFAULT_LEAD_TIME_RESTOCK=2-4 weeks
+
+# Alert Notifications (Optional)
+ALERT_EMAIL_ENABLED=false
+ALERT_EMAIL_TO=alerts@solarcellzusa.com
+ALERT_EMAIL_FROM=alerts@solarcellzusa.com
+SMTP_HOST=smtp.mailgun.org
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+ALERT_WEBHOOK_URL=
 ```
 
-Once saved:
-- All calls immediately connect to live Shopify and live DEP API.
-- If you want to test with another Shopify test store in the meantime, simply set `SHOPIFY_STORE_DOMAIN` and `SHOPIFY_ADMIN_ACCESS_TOKEN` to that test store.
-
 ---
 
-##  Data Mapping & Business Rules
+## Data Mapping and Business Rules
 
-DEP's API accepts 4 fields per product:
+DEP's API accepts four fields per product:
 
-| DEP Field | Rule from DEP Docs | Source in Shopify | Update Trigger |
+| DEP Field | Rule | Shopify Source | Trigger |
 | :--- | :--- | :--- | :--- |
-| `dcideId` (URL) | 24-character ID | Metafield `dep.dcide_id` (or `config/product-mappings.json`) | Set once |
-| `price` | Non-negative number in USD (not cents) | Variant `price` | Webhook + nightly reconcile |
-| `leadTime` | Max 60 characters free text | "In stock" if inventory > 0, else metafield `dep.lead_time` / category default | When edited + nightly |
-| `sku` | Unique per product (else 409) | Variant SKU / model number | Set once |
+| `dcideId` | 24-character ID in URL | Product mapping catalog (`config/product-mappings.json`) or metafield `dep.dcide_id` | Set once |
+| `price` | Non-negative number in USD | Variant price | Webhook + nightly reconcile |
+| `leadTime` | Max 60 characters free text | "In stock" when inventory > 0, else metafield `dep.lead_time` / category default | When edited + nightly |
+| `sku` | Unique per product | Variant SKU / model number | Set once |
 | `url` | Must start with `https://` | Product URL (`https://store.solarcellzusa.com/products/{handle}`) | Set once |
 
-### Discontinued / Out-of-Stock Products:
-- **Out of stock (`inventory_quantity === 0`)**: Updates `leadTime` to restock time (e.g. "2-4 weeks").
-- **Discontinued or archived**: Sends `DELETE /api/distributor-prices/{dcideId}`. Products are never set to `$0`.
+### Discontinued and Out-of-Stock Handling
+- **Out of stock (`inventory_quantity == 0`)**: Updates `leadTime` to restock time (e.g., "5-9 days" or "2-4 weeks").
+- **Discontinued or archived**: Dispatches `DELETE /api/distributor-prices/{dcideId}`. Products are removed cleanly, never set to $0.
 
 ---
 
-## ️ CLI Commands & Operational Scripts
+## Deployment and Webhook Setup
+
+### 1. Cloud Deployment (Vercel)
+Deploy this repository to Vercel or any Node.js environment:
+1. Connect the repository in Vercel.
+2. Add the environment variables from `.env`.
+3. Deploy. The built-in `vercel.json` automatically configures serverless routing and schedules the nightly reconcile cron job at 2:00 AM UTC.
+
+### 2. Shopify Webhook Configuration
+Register the following webhooks in Shopify Admin under **Settings** > **Notifications** > **Webhooks**:
+
+| Event | Format | Endpoint URL |
+| :--- | :--- | :--- |
+| `Product update` | JSON | `https://your-domain.com/api/webhooks/shopify/products/update` |
+| `Inventory levels update` | JSON | `https://your-domain.com/api/webhooks/shopify/inventory_levels/update` |
+| `Product deletion` | JSON | `https://your-domain.com/api/webhooks/shopify/products/delete` |
+
+---
+
+## Available Commands
 
 | Command | Description |
 | :--- | :--- |
-| `npm run sync:test-one` | Push single product (CPS ES-125kW) and verify in DEP (Phase 2 acceptance). |
-| `npm run sync:all` | Bulk push entire mapped catalog with configurable pause (`BATCH_DELAY_MS`) to respect rate limits. |
-| `npm run sync:reconcile` | Runs `GET /api/distributor-prices`, compares against Shopify, identifies drift, auto-fixes differences, and outputs an audit report. |
-| `npm run build` | Compiles TypeScript into production-ready JavaScript (`dist/`). |
-| `npm start` | Starts compiled production server. |
-| `npm test` | Runs Vitest test suite. |
-
----
-
-##  Webhook Endpoints
-
-Configure these in Shopify Admin > **Settings** > **Notifications** > **Webhooks**:
-
-| Shopify Event | Endpoint URL | Behavior |
-| :--- | :--- | :--- |
-| `products/update` | `https://your-domain.com/api/webhooks/shopify/products/update` | Synchronizes changed price, lead time, or title. |
-| `inventory_levels/update` | `https://your-domain.com/api/webhooks/shopify/inventory_levels/update` | Automatically switches between "In stock" and restock lead time. |
-| `products/delete` | `https://your-domain.com/api/webhooks/shopify/products/delete` | Issues `DELETE` to DEP to withdraw the listing. |
-
-### Development Simulation Endpoint
-You can simulate a webhook locally without ngrok by sending:
-```bash
-curl -X POST http://localhost:3000/api/webhooks/simulate \
-  -H "Content-Type: application/json" \
-  -d '{"handle": "cps-america-125kw-energy-storage-inverter", "price": 18999.00, "inventory_quantity": 0}'
-```
-
----
-
-##  Alerts & Monitoring
-
-- **401 Unauthorized**: If `DCIDE_API_KEY` is revoked, immediate critical alert is dispatched.
-- **409 Conflict**: Logged and dispatched if an SKU collides across two products.
-- **Drift Detected**: If nightly reconcile detects price drift or missing items, an audit report is generated and emailed to `nathan@solarcellzusa.com` and `deven@devenwebstudio.com`.
-- **Configurable channels**: SMTP Email (`ALERT_EMAIL_ENABLED=true`) and Webhook URL (Slack/Discord).
-
----
-
-##  Nightly Reconcile Automation
-
-To schedule the nightly reconcile on your server or cloud provider:
-
-### Via Linux Cron (e.g. 2:00 AM UTC):
-```bash
-0 2 * * * cd /path/to/Solar && /usr/bin/npm run sync:reconcile >> /var/log/dep-reconcile.log 2>&1
-```
-
-### Via HTTP Cron (e.g. Cloudflare Workers, Vercel Cron, EasyCron):
-Send an authenticated `POST` request to:
-```
-POST https://your-domain.com/api/sync/reconcile
-```
-
+| `npm run build` | Compiles TypeScript source to production JavaScript (`dist/`). |
+| `npm start` | Starts the production server. |
+| `npm run dev` | Runs the development server with live reload. |
+| `npm test` | Executes the unit and integration test suite. |
+| `npm run sync:all` | Performs a full bulk catalog sync with rate throttling. |
+| `npm run sync:reconcile` | Runs the full catalog reconciliation audit and auto-heals discrepancies. |
+| `npm run sync:test-one` | Pushes a single mapped product to DEP to verify API connectivity. |
