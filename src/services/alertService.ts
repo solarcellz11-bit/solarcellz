@@ -18,7 +18,7 @@ export async function sendAlertNotification(options: AlertNotificationOptions): 
     timestamp,
   };
 
-  console.error('\n🚨 ==================== INTEGRATION ALERT ====================');
+  console.error('\n ==================== INTEGRATION ALERT ====================');
   console.error(`Timestamp: ${timestamp}`);
   console.error(`Subject:   ${alertPayload.subject}`);
   console.error(`Message:   ${options.message}`);

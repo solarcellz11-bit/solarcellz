@@ -17,7 +17,7 @@ webhookRouter.use('/shopify', verifyShopifyHmac);
 webhookRouter.post('/shopify/products/update', async (req: Request, res: Response): Promise<void> => {
   const product: ShopifyProduct = req.body;
   const topic = req.get('X-Shopify-Topic') || 'products/update';
-  console.log(`\n🔔 [Webhook] Received ${topic} for product ID: ${product.id} (${product.handle})`);
+  console.log(`\n [Webhook] Received ${topic} for product ID: ${product.id} (${product.handle})`);
 
   try {
     const result = await syncEngine.syncProduct(product);
@@ -41,7 +41,7 @@ webhookRouter.post('/shopify/products/update', async (req: Request, res: Respons
  */
 webhookRouter.post('/shopify/products/delete', async (req: Request, res: Response): Promise<void> => {
   const { id } = req.body;
-  console.log(`\n🔔 [Webhook] Received products/delete for product ID: ${id}`);
+  console.log(`\n [Webhook] Received products/delete for product ID: ${id}`);
 
   try {
     // Check if we have mapped DCIDE ID in memory/mapping
@@ -72,7 +72,7 @@ webhookRouter.post('/shopify/products/delete', async (req: Request, res: Respons
  */
 webhookRouter.post('/shopify/inventory_levels/update', async (req: Request, res: Response): Promise<void> => {
   const { inventory_item_id, available } = req.body;
-  console.log(`\n🔔 [Webhook] Received inventory_levels/update: Item ${inventory_item_id} -> Available: ${available}`);
+  console.log(`\n [Webhook] Received inventory_levels/update: Item ${inventory_item_id} -> Available: ${available}`);
 
   try {
     const shopifyClient = getShopifyClient();

@@ -1,7 +1,7 @@
-# ☀️ Solar Cellz USA × Direct Energy Partners (DEP)
+# ️ Solar Cellz USA × Direct Energy Partners (DEP)
 ## Catalog Integration & Live Reconciliation Audit Report
 **Date:** November 3, 2026  
-**Environment:** Production Live (`store.solarcellzusa.com` ➔ `directenergypartners.com`)  
+**Environment:** Production Live (`store.solarcellzusa.com`  `directenergypartners.com`)  
 **Auditor:** Deven Web Studio / Integration Specialist  
 
 ---
@@ -50,13 +50,13 @@ Shopify price had updated on Solar Cellz store and was out of sync on DEP:
 
 ### B. Lead-Time & Stock Updates (7 Items)
 Products whose inventory quantities dropped to 0 on Shopify were updated to reflect restock lead times:
-* **EG4 FlexBOSS21 16kW Hybrid Inverter** (`691ceace526cd7492ee7e6f5`) ➔ Updated from *"In stock"* to **`5-9 days`**
-* **REC450AA Pure-RX 450W Panel** (`67e2d9559c5edbf48f00a056`) ➔ Updated from *"In stock"* to **`5-9 days`**
-* **REC Solar REC420AA Pure-2 420W** (`67e2dd3ba3fa95ae6383ff43`) ➔ Updated from *"In stock"* to **`5-9 days`**
-* **REC Alpha Black REC400AA 400W** (`67e2db761bede2f75a4fe821`) ➔ Updated from *"In stock"* to **`5-9 days`**
-* **REC Alpha Pure-RX 470W** (`67e2d957002cd553cb9af802`) ➔ Updated from *"In stock"* to **`5-9 days`**
-* **REC Pure-R 410W Solar Panel** (`67e2db75a9b2dbf9bd1cd68c`) ➔ Updated from *"In stock"* to **`5-9 days`**
-* **Q-Cells Q.Peak ML G10+ 410W** (`6a99319c9603b0a1eab02dfc`) ➔ Updated from *"In stock"* to **`5-9 days`**
+* **EG4 FlexBOSS21 16kW Hybrid Inverter** (`691ceace526cd7492ee7e6f5`)  Updated from *"In stock"* to **`5-9 days`**
+* **REC450AA Pure-RX 450W Panel** (`67e2d9559c5edbf48f00a056`)  Updated from *"In stock"* to **`5-9 days`**
+* **REC Solar REC420AA Pure-2 420W** (`67e2dd3ba3fa95ae6383ff43`)  Updated from *"In stock"* to **`5-9 days`**
+* **REC Alpha Black REC400AA 400W** (`67e2db761bede2f75a4fe821`)  Updated from *"In stock"* to **`5-9 days`**
+* **REC Alpha Pure-RX 470W** (`67e2d957002cd553cb9af802`)  Updated from *"In stock"* to **`5-9 days`**
+* **REC Pure-R 410W Solar Panel** (`67e2db75a9b2dbf9bd1cd68c`)  Updated from *"In stock"* to **`5-9 days`**
+* **Q-Cells Q.Peak ML G10+ 410W** (`6a99319c9603b0a1eab02dfc`)  Updated from *"In stock"* to **`5-9 days`**
 
 ### C. Orphaned Product Cleanup (1 Item)
 * **Product:** SolarEdge `SE7600H-US [208V]` (`6a731fea1e49343aaaf01677`)

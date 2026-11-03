@@ -45,13 +45,13 @@ async function main() {
   const stored = allStored.data.find((p) => p.dcideId === result.dcideId);
 
   if (stored) {
-    console.log('✅ Confirmed in DEP DCIDE:');
+    console.log(' Confirmed in DEP DCIDE:');
     console.log(JSON.stringify(stored, null, 2));
   } else {
     console.log('Note: Record pushed. In live mode, verify via DCIDE web interface.');
   }
 
-  console.log('\n✅ Single product test complete!');
+  console.log('\n Single product test complete!');
 }
 
 main().catch((err) => {

@@ -72,10 +72,10 @@ const PORT = env.PORT || 3000;
 if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => {
     console.log(`\n======================================================`);
-    console.log(`☀️  Solar Cellz × DEP Middleware Server Running!`);
-    console.log(`📡 Listening on: http://localhost:${PORT}`);
-    console.log(`⚙️  Shopify Mode: ${isMockShopifyActive() ? 'MOCK (Ready for live token)' : 'LIVE'}`);
-    console.log(`🌐 DEP Endpoint: ${env.DEP_API_BASE_URL}`);
+    console.log(`️  Solar Cellz × DEP Middleware Server Running!`);
+    console.log(` Listening on: http://localhost:${PORT}`);
+    console.log(`️  Shopify Mode: ${isMockShopifyActive() ? 'MOCK (Ready for live token)' : 'LIVE'}`);
+    console.log(` DEP Endpoint: ${env.DEP_API_BASE_URL}`);
     console.log(`======================================================\n`);
   });
 }

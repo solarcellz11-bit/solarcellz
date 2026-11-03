@@ -24,7 +24,7 @@ export class ReconcileService {
    */
   public async reconcile(autoFix: boolean = true): Promise<ReconcileReport> {
     const timestamp = new Date().toISOString();
-    console.log(`\n🔍 [Reconcile] Starting reconciliation audit at ${timestamp}...`);
+    console.log(`\n [Reconcile] Starting reconciliation audit at ${timestamp}...`);
 
     // 1. Fetch DEP stored prices (GET /api/distributor-prices)
     const depResp = await this.activeDepClient.getAllStoredPrices();

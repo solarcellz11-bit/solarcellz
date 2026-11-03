@@ -4,7 +4,7 @@
 
 ---
 
-## ⚡ Overview & Architecture
+##  Overview & Architecture
 
 Shopify serves as the **single source of truth**. The middleware pushes price, lead time, SKU, and product URL to DEP's Distributor Pricing API.
 
@@ -37,7 +37,7 @@ Shopify serves as the **single source of truth**. The middleware pushes price, l
 
 ---
 
-## 🚀 Quick Start (Works Offline / In Mock Mode Right Now)
+##  Quick Start (Works Offline / In Mock Mode Right Now)
 
 The system includes a **built-in mock mode** with the 58-product match catalog so you can run and test everything end-to-end **immediately**, even before receiving live credentials from Nathan or Ben.
 
@@ -75,7 +75,7 @@ The server will start on `http://localhost:3000` with the health check available
 
 ---
 
-## 🔑 Switching to Production (When You Receive API Keys)
+##  Switching to Production (When You Receive API Keys)
 
 When Nathan provides the Shopify Custom App Token and Ben sends the DCIDE API Key, **no code changes are needed**! Simply edit `.env`:
 
@@ -99,7 +99,7 @@ Once saved:
 
 ---
 
-## 📋 Data Mapping & Business Rules
+##  Data Mapping & Business Rules
 
 DEP's API accepts 4 fields per product:
 
@@ -117,7 +117,7 @@ DEP's API accepts 4 fields per product:
 
 ---
 
-## 🛠️ CLI Commands & Operational Scripts
+## ️ CLI Commands & Operational Scripts
 
 | Command | Description |
 | :--- | :--- |
@@ -130,7 +130,7 @@ DEP's API accepts 4 fields per product:
 
 ---
 
-## 📡 Webhook Endpoints
+##  Webhook Endpoints
 
 Configure these in Shopify Admin > **Settings** > **Notifications** > **Webhooks**:
 
@@ -150,7 +150,7 @@ curl -X POST http://localhost:3000/api/webhooks/simulate \
 
 ---
 
-## 🚨 Alerts & Monitoring
+##  Alerts & Monitoring
 
 - **401 Unauthorized**: If `DCIDE_API_KEY` is revoked, immediate critical alert is dispatched.
 - **409 Conflict**: Logged and dispatched if an SKU collides across two products.
@@ -159,7 +159,7 @@ curl -X POST http://localhost:3000/api/webhooks/simulate \
 
 ---
 
-## 🕒 Nightly Reconcile Automation
+##  Nightly Reconcile Automation
 
 To schedule the nightly reconcile on your server or cloud provider:
 
