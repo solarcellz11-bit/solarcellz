@@ -151,7 +151,9 @@ export class SyncEngine {
     const mapping = this.localMappings.get(dcideId);
     const leadTime = this.determineLeadTime(product, variant, mapping);
 
-    const cleanDomain = env.SHOPIFY_STORE_DOMAIN.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    const cleanDomain = (env.SHOPIFY_PUBLIC_DOMAIN || env.SHOPIFY_STORE_DOMAIN)
+      .replace(/^https?:\/\//, '')
+      .replace(/\/$/, '');
     const productUrl = mapping?.shopifyUrl || `https://${cleanDomain}/products/${product.handle}`;
 
     return {

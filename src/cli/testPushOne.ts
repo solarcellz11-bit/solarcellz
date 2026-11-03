@@ -10,16 +10,13 @@ async function main() {
   const shopifyClient = getShopifyClient();
   const products = await shopifyClient.getAllProducts();
 
-  // Find CPS ES-125kW or first converter product
-  const targetProduct =
-    products.find(
-      (p) =>
-        p.variants.some((v) => v.sku.toUpperCase().includes('CPS-ES-125')) ||
-        p.handle.includes('cps')
-    ) || products[0];
+  // Find a mapped product by checking if syncEngine can resolve its DCIDE ID
+  let targetProduct = products.find((p) => {
+    return p.variants.some((v) => syncEngine.resolveDcideId(p, v) !== null);
+  });
 
   if (!targetProduct) {
-    console.error('Error: Could not find target product in catalog.');
+    console.error('Error: Could not find any mapped product in Shopify catalog.');
     process.exit(1);
   }
 

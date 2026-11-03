@@ -35,7 +35,7 @@ export class LiveShopifyClient implements IShopifyClient {
     try {
       const query = `
         query getProducts($cursor: String) {
-          products(first: 100, after: $cursor, query: "status:active") {
+          products(first: 50, after: $cursor, query: "status:active") {
             pageInfo {
               hasNextPage
               endCursor
@@ -47,7 +47,7 @@ export class LiveShopifyClient implements IShopifyClient {
                 title
                 handle
                 status
-                variants(first: 20) {
+                variants(first: 10) {
                   edges {
                     node {
                       id
@@ -63,7 +63,7 @@ export class LiveShopifyClient implements IShopifyClient {
                     }
                   }
                 }
-                metafields(first: 20, namespace: "dep") {
+                metafields(first: 10, namespace: "dep") {
                   edges {
                     node {
                       id
@@ -85,10 +85,22 @@ export class LiveShopifyClient implements IShopifyClient {
       const allProducts: ShopifyProduct[] = [];
 
       while (hasNextPage) {
-        const response: any = await this.client.post('/graphql.json', {
-          query,
-          variables: { cursor },
-        });
+        let attempts = 0;
+        let response: any = null;
+
+        while (attempts < 3) {
+          try {
+            response = await this.client.post('/graphql.json', {
+              query,
+              variables: { cursor },
+            });
+            break;
+          } catch (netErr: any) {
+            attempts++;
+            if (attempts >= 3) throw netErr;
+            await new Promise((r) => setTimeout(r, 1000 * attempts));
+          }
+        }
 
         if (response.data.errors) {
           throw new Error(`GraphQL Error: ${JSON.stringify(response.data.errors)}`);

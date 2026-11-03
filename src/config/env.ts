@@ -13,7 +13,8 @@ const envSchema = z.object({
   DCIDE_API_KEY: z.string().default(''),
 
   // Shopify Settings
-  SHOPIFY_STORE_DOMAIN: z.string().default('store.solarcellzusa.com'),
+  SHOPIFY_STORE_DOMAIN: z.string().default('p2bgv0-0e.myshopify.com'),
+  SHOPIFY_PUBLIC_DOMAIN: z.string().default('store.solarcellzusa.com'),
   SHOPIFY_ADMIN_ACCESS_TOKEN: z.string().optional().default(''),
   SHOPIFY_API_VERSION: z.string().default('2024-10'),
   SHOPIFY_WEBHOOK_SECRET: z.string().default(''),
