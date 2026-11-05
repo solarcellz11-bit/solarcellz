@@ -57,8 +57,8 @@ if (!parsed.success) {
 
 export const env = parsed.data;
 
-// If no Shopify token is provided, enforce mock mode automatically
+// If in test environment or no Shopify token is provided, enforce mock mode automatically
 export const isMockShopifyActive = (): boolean => {
-  return env.USE_MOCK_SHOPIFY || !env.SHOPIFY_ADMIN_ACCESS_TOKEN;
+  return env.NODE_ENV === 'test' || env.USE_MOCK_SHOPIFY || !env.SHOPIFY_ADMIN_ACCESS_TOKEN;
 };
 

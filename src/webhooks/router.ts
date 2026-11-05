@@ -11,6 +11,30 @@ export const webhookRouter = Router();
 webhookRouter.use('/shopify', verifyShopifyHmac);
 
 /**
+ * POST /api/webhooks/shopify/products/create
+ * Triggered the instant a new product is created in Shopify
+ */
+webhookRouter.post('/shopify/products/create', async (req: Request, res: Response): Promise<void> => {
+  const product: ShopifyProduct = req.body;
+  console.log(`\n[Webhook] Received products/create for new product: ${product.id} (${product.handle})`);
+
+  try {
+    const result = await syncEngine.syncProduct(product);
+
+    if (result.success) {
+      console.log(`[Webhook] Successfully created new product listing in DEP: ${result.sku} (${result.dcideId}) -> $${result.price}`);
+      res.status(200).json({ success: true, result });
+    } else {
+      console.log(`[Webhook] New product ${product.handle} ignored (not mapped to DEP): ${result.error}`);
+      res.status(200).json({ success: false, reason: result.error });
+    }
+  } catch (err: any) {
+    console.error(`[Webhook] Error processing products/create:`, err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+/**
  * POST /api/webhooks/shopify/products/update
  * Triggered on price, title, handle, or status changes in Shopify
  */
