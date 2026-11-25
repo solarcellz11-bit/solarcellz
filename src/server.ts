@@ -47,8 +47,8 @@ app.post('/api/sync/all', async (_req: Request, res: Response) => {
   }
 });
 
-// Trigger nightly reconciliation on demand
-app.post('/api/sync/reconcile', async (_req: Request, res: Response) => {
+// Trigger nightly reconciliation on demand or via Vercel Cron (GET / POST)
+app.all('/api/sync/reconcile', async (_req: Request, res: Response) => {
   try {
     const report = await reconcileService.reconcile(true);
     res.status(200).json(report);
